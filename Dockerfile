@@ -40,7 +40,7 @@ ENV PATH "/gatk-4.0.2.1/:$PATH"
 
 # Install picard
 COPY picard.jar .
-
+ENV PICARD_HOME /
 
 ENTRYPOINT [ "/repo/ensembl-hive/scripts/dev/simple_init.py" ]
 #USER ubuntu
