@@ -1,10 +1,17 @@
-# Container 'lineage' 
-# tweep/ehive-base-ubuntu-18
+# Container 'lineage'  
+# ubuntu:18.04
 #            ↓
+# tweep/ehive-base-ubuntu-18
 #            ↓
 # tweep/ehive-base-ubuntu-18-extended:latest ( aws cli, perl modules ) 
 
-FROM tweep/ehive-base-ubuntu-18-extended:latest
+# THIS: tweep/ehive-sentieon-feb-basic 
+
+FROM tweep/ehive-aws-rsc:latest
+
+# This Docker file installs various bioinformatic tools for our pipelines: 
+# Sentieon FEB 
+
 
 # Install bcftools 
 ADD https://sourceforge.net/projects/samtools/files/samtools/1.6/bcftools-1.6.tar.bz2/download  bcftools.tar.bz2
