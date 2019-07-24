@@ -8,7 +8,7 @@
 # THIS: tweep/ehive-sentieon-feb-basic 
 
 FROM tweep/ehive-aws-rsc:latest
-
+USER root
 # This Docker file installs various bioinformatic tools for our pipelines: 
 # Sentieon FEB 
 
