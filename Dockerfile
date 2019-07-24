@@ -14,10 +14,10 @@ FROM tweep/ehive-aws-rsc:latest
 
 
 # Install bcftools 
-ADD https://sourceforge.net/projects/samtools/files/samtools/1.6/bcftools-1.6.tar.bz2/download  bcftools.tar.bz2
-RUN mkdir bcftools && tar xjf bcftools.tar.bz2 -C bcftools --strip-components 1  
-RUN apt-get -y install zlib1g-dev 
-RUN cd bcftools && /configure --disable-bz2 --disable-lzma && make install 
+#ADD https://sourceforge.net/projects/samtools/files/samtools/1.6/bcftools-1.6.tar.bz2/download  bcftools.tar.bz2
+#RUN mkdir bcftools && tar xjf bcftools.tar.bz2 -C bcftools --strip-components 1  
+#RUN apt-get -y install zlib1g-dev 
+#RUN cd bcftools && /configure --disable-bz2 --disable-lzma && make install 
 
 # Install samtools 1.6 
 ADD https://sourceforge.net/projects/samtools/files/samtools/1.6/samtools-1.6.tar.bz2/download  samtools.tar.bz2 
