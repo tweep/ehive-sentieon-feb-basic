@@ -18,8 +18,8 @@ USER root
 RUN apt-get -y install libbz2-dev liblzma-dev libssl1.0-dev zlib1g-dev libcurl3  pkg-config
 
 # Install bcftools 
-
-ADD https://sourceforge.net/projects/samtools/files/samtools/1.6/bcftools-1.6.tar.bz2/download  bcftools.tar.bz2
+COPY bcftools-1.6.tar.bz2 bcftools.tar.bz2
+#ADD https://sourceforge.net/projects/samtools/files/samtools/1.6/bcftools-1.6.tar.bz2/download  bcftools.tar.bz2
 RUN mkdir bcftools && tar xjf bcftools.tar.bz2 -C bcftools --strip-components 1  
 RUN cd bcftools && ./configure --disable-bz2 --disable-lzma --prefix=/usr/local/bin 
 
