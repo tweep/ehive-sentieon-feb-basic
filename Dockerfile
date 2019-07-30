@@ -38,7 +38,7 @@ RUN cd samblaster && make && cp samblaster /usr/local/bin/
 
 # Install sentieon  https://s3.amazonaws.com/sentieon-release/software/sentieon-genomics-201711.04.tar.gz
 #COPY sentieon-genomics-201711.04.tar.gz   .
-RUN apt-get install python3-distutils
+RUN apt-get install python-minimal
 ADD https://s3.amazonaws.com/sentieon-release/software/sentieon-genomics-201711.04.tar.gz .
 RUN mkdir sentieon && tar xvf  sentieon-genomics-201711.04.tar.gz  -C sentieon --strip-components 1 
 ENV PATH="/home/ubuntu/sentieon/bin:${PATH}"
